@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>HTML + CSS + DOM</h1>
+    </header>
+    <main>
+
+        <form id="form" action="" method="get">
+            <div>
+                <label for="vendedor">Nombre del Vendedor:</label>
+                <select name="vendedor" id="vendedor">
+                    <option value="">Escoje un Vendejor</option>
+                    <option value="pedro">Pedro</option>
+                    <option value="juana">Juana</option>
+                </select>
+            </div>
+            <div>
+                <label for="producto">Nombre del Producto:</label>
+                <select name="producto" id="producto">
+                    <option value="">Escoje un producto</option>
+                    <option value="aqua">Aqua</option>
+                    <option value="emocion">Emoción</option>
+                    <option value="alegria">Alegría</option>
+                    <option value="frescura">Frescura</option>
+                </select>
+            </div>
+            <div>
+                <label for="cantidad">Cantidad de productos vendidos</label>
+                <input type="text" id="cantidad" name="cantidad">
+            </div>
+            <div>
+                <button onclick="activarOnclick()">Registrar venta</button>
+            </div>
+        </form>
+        <section id="ventasVendedor">
+            <p>Ventas por vendedor:</p>
+            <p>Pedro: <span id="ventasPedro">0</span> USD</p>
+            <p>Juana: <span id="ventasJuana">0</span> USD</p>
+            <div>
+                <button onclick="totalVentas()">Total ventas vendedores</button>
+            </div>
+        </section>
+        <section>
+            <p>Vendedor del Mes: <span id="vendedorMes"></span></p>
+            <button onclick="empleadoMes()">Conocer vendedor del mes</button>
+        </section>
+        <script src="script.js"></script>
+    </main>
+</body>
+</html>
